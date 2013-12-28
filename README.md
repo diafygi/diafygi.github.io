@@ -3,8 +3,10 @@
 I have several side projects, and this is where I link to them all.
 
 ##Active Side Projects
-* **[byoFS](https://github.com/diafygi/byoFS)** - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
+* **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](http://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
+* **[b2g_inari_nightly](https://github.com/diafygi/b2g_inari_nightly)** (*[builds](https://daylightpirates.org/b2g_inari_nightly_builds/)*) - Nightly builds of [Firefox OS](https://www.mozilla.org/en-US/firefox/os/) (codenamed b2g) for the [ZTE Open](http://www.ztedevices.com/product/smart_phone/2bcf2d56-0c9a-4129-a25c-acce58c8e502.html) (codenamed inari).
+    * Started nightly builds for three branches: master, v1.2, and v1.3. (*2013-12-28*)
 
 ##Abandoned Side Projects
 * **[d3 on cheap smartphones](https://github.com/diafygi/d3cheap)** (*[demo](http://diafygi.github.io/d3cheap)*, *[video](https://www.youtube.com/watch?v=T3MU3jxEye8)*) - Exploring the svg and d3 performance on $80 Android and Firefox OS smartphones. My first time messing around with Firefox OS. (*2013*)
