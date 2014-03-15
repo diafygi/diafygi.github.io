@@ -10,14 +10,14 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="1619.1484"
-   height="509.45618"
+   width="1629.1484"
+   height="519.45618"
    id="svg2"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="logo_twoline.svg"
    inkscape:export-filename="/home/diafygi/Dropbox/dev/diafygi.github.io/assets/logo_twoline.png"
-   inkscape:export-xdpi="14.132717"
-   inkscape:export-ydpi="14.132717">
+   inkscape:export-xdpi="14.033908"
+   inkscape:export-ydpi="14.033908">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -32,16 +32,16 @@
      id="namedview67"
      showgrid="false"
      inkscape:zoom="0.34840119"
-     inkscape:cx="1368.4421"
-     inkscape:cy="-151.70455"
+     inkscape:cx="976.15945"
+     inkscape:cy="100.0463"
      inkscape:window-x="49"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
   <style
      id="style4" />
   <defs
@@ -59,7 +59,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(279.59207,-170.50496)"
+     transform="translate(284.59207,-165.50496)"
      id="g10">
     <g
        transform="translate(1665.0911,-320.61845)"
@@ -165,7 +165,7 @@
               <path
                  d="m 332.53,149.92 c 12.08,0 33.66,-0.11 37.16,-0.11 0,0.26 -0.01,0.34 -0.01,0.6 -2.44,0 -14.1,0 -19.43,0 7.84,1.61 10.66,4.73 12.38,8.8 0.69,-3.31 3.22,-4.45 7.06,-4.45 0,0.34 -0.02,0.18 -0.02,0.76 -1.72,-0.05 -4.99,0.1 -6.49,4.79 0.12,1.84 -0.29,4.02 -1.11,6.06 -5.58,13.96 -21.22,27.64 -33.88,27.64 -11.51,0 -21.07,-9.11 -21.07,-24.22 0,-17.23 12.96,-19.87 25.41,-19.87 z"
                  id="path58"
-                 style="fill:#000000;stroke:#ffffff;stroke-width:1.4744693"
+                 style="fill:#000000;stroke:#ffffff;stroke-width:2.89586663;stroke-miterlimit:4;stroke-dasharray:none"
                  inkscape:connector-curvature="0" />
             </g>
             <g
@@ -174,13 +174,12 @@
               <path
                  d="m 332.53,149.92 c 12.08,0 33.66,-0.11 37.16,-0.11 0,0.26 -0.01,0.34 -0.01,0.6 -2.44,0 -14.1,0 -19.43,0 7.84,1.61 10.66,4.73 12.38,8.8 0.69,-3.31 3.22,-4.45 7.06,-4.45 0,0.34 -0.02,0.18 -0.02,0.76 -1.72,-0.05 -4.99,0.1 -6.49,4.79 0.12,1.84 -0.29,4.02 -1.11,6.06 -5.58,13.96 -21.22,27.64 -33.88,27.64 -11.51,0 -21.07,-9.11 -21.07,-24.22 0,-17.23 12.96,-19.87 25.41,-19.87 z"
                  id="path62"
-                 style="fill:#000000;stroke:#ffffff;stroke-width:1.4744693"
+                 style="fill:#000000;stroke:#ffffff;stroke-width:2.89586663;stroke-miterlimit:4;stroke-dasharray:none"
                  inkscape:connector-curvature="0" />
             </g>
           </g>
           <path
-             d="m -1097.08,627.33 c -2.88,-0.91 -10.72,9.22 -9.19,19.45 1.41,9.44 3.71,0.84 3.67,-2.67 -0.09,-10.22 9.05,-15.67 5.52,-16.78 z"
-             transform="matrix(0.72207041,0,0,0.72207041,1108.745,-309.20472)"
+             d="m 318.84575,142.86601 c -2.39657,-1.01756 -9.95664,7.03077 -9.48446,15.93495 0.43414,8.21641 3.11455,1.02571 3.36869,-1.98954 0.76265,-8.77726 9.05366,-12.70281 6.11577,-13.94541 z"
              id="path64"
              style="fill:#ffffff"
              inkscape:connector-curvature="0" />
