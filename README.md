@@ -4,6 +4,8 @@
 Welcome to Daylight Pirates! I love side projects, and here is where I link to them all. See [LinkedIn](http://www.linkedin.com/pub/daniel-roesler/41/491/739) for stuff I get paid to do.
 
 ##Active Side Projects
+* **[myLock](https://github.com/diafygi/myLock)** (*[demo](http://diafygi.github.io/myLock/)*) - myLock Easy Encryption, a javascript app and library that allows asymmetric encryption in a browser.
+    * Initial release (*2014-07-26*)
 * **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](http://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
     * Redesigned API and rewrote README to reflect new API. (*2014-02-03*)
