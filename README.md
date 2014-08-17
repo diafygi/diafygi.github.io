@@ -18,6 +18,7 @@ Welcome to Daylight Pirates! I love side projects, and here is where I link to t
     * [Bug #965180](https://bugzilla.mozilla.org/show_bug.cgi?id=965180) is preventing me from building. (*2014-01-29*)
 
 ##Abandoned Side Projects
+* **[Base58 encoder/decoder](https://gist.github.com/diafygi/90a3e80ca1c2793220e5/)** (*[demo](https://rawgit.com/diafygi/90a3e80ca1c2793220e5/raw/ab5f00af7ba9e150179d2aef9ff3d8d894b6265b/test.html)*) - A fun [140byt.es](http://www.140byt.es/) project to make the smallest base 58 encoder and decoder possible in javascript. (*2014*)
 * **[Bullet Spinner](https://gist.github.com/diafygi/9614360)** (*[demo](https://rawgithub.com/diafygi/9614360/raw/9ce994e4f694d43daabb05a9fc19b0e09b740ba9/test.html)*) - A fun [140byt.es](http://www.140byt.es/) project to make an ajax-style loading spinner in fewer than 140 bytes of javascript. (*2014*)
 * **[d3 on cheap smartphones](https://github.com/diafygi/d3cheap)** (*[demo](http://diafygi.github.io/d3cheap)*, *[video](https://www.youtube.com/watch?v=T3MU3jxEye8)*) - Exploring the svg and d3 performance on $80 Android and Firefox OS smartphones. My first time messing around with Firefox OS. (*2013*)
 * **[Ascent Solar](https://github.com/diafygi/ascentsolar)** (*[demo](https://www.youtube.com/watch?v=5bNU8qsG9RA)*) - A developing world solar lantern inventory tracker that I helped code for the SFunCube solar hackathon. (*2013*)
