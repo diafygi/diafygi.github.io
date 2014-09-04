@@ -15,7 +15,8 @@ Welcome to Daylight Pirates! I love side projects, and here is where I link to t
     * Hackathon project to make a secure chat example (*[demo](http://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
 ##Abandoned Side Projects
-* **[Keen Casa](https://github.com/diafygi/keencasa/)** (*[demo](http://www.keencasa.com/)*) - The Mint.com for Internet of Things. Created this prototype and pitch with a team at ProtoHack San Francisco. We got into the top five finalists (out of 40 entries). (*2014*)
+* **[Offset248](https://github.com/diafygi/Offset248/)** - Binary encoding for the Unicode world. A simple technique for encoding binary to text that can be easily copied and pasted. (*2014*)
+* **[Keen Casa](https://github.com/diafygi/keencasa/)** (*[demo](http://www.keencasa.com/)*, *[video](https://www.youtube.com/watch?v=RQBdhjic-58)*) - The Mint.com for Internet of Things. Created this prototype and pitch with a team at ProtoHack San Francisco. We got into the top five finalists (out of 40 entries). (*2014*)
 * **[Base58 encoder/decoder](https://gist.github.com/diafygi/90a3e80ca1c2793220e5/)** (*[demo](https://rawgit.com/diafygi/90a3e80ca1c2793220e5/raw/ab5f00af7ba9e150179d2aef9ff3d8d894b6265b/test.html)*) - A fun [140byt.es](http://www.140byt.es/) project to make the smallest base 58 encoder and decoder possible in javascript. (*2014*)
 * **[b2g_inari_nightly](https://github.com/diafygi/b2g_inari_nightly)** (*[builds](https://daylightpirates.org/b2g_inari_nightly_builds/)*) - Nightly builds of [Firefox OS](https://www.mozilla.org/en-US/firefox/os/) (codenamed b2g) for the [ZTE Open](http://www.ztedevices.com/product/smart_phone/2bcf2d56-0c9a-4129-a25c-acce58c8e502.html) (config name: inari).
     * Started nightly builds for three branches: master, v1.2, and v1.3. (*2013-12-28*)
