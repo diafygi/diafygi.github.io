@@ -3,9 +3,6 @@
 ##About
 Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love side projects, and here is where I link to them all. See [LinkedIn](http://www.linkedin.com/pub/daniel-roesler/41/491/739) for stuff I get paid to do.
 
-##Posts
-* *2014-10-24* - **[Proposal: AOL should start offering free SSL Certificates](?posts/AOL_SSL_certs.md)**
-
 ##Active Side Projects
 
 * **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](http://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
