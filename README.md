@@ -4,17 +4,18 @@
 Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love side projects, and here is where I link to them all. See [LinkedIn](http://www.linkedin.com/pub/daniel-roesler/41/491/739) for stuff I get paid to do.
 
 ##Active Side Projects
-
-* **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](http://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
-    * Initial release (*2014-08-16*)
-* **[myLock](https://github.com/diafygi/myLock)** (*[demo](http://diafygi.github.io/myLock/)*) - myLock Easy Encryption, a javascript app and library that allows asymmetric encryption in a browser.
-    * Initial release (*2014-07-26*)
+* **[Ballot API](https://www.ballotapi.com/)** (*[code](http://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
+    * First attempt at API docs (*2014-11-03*)
 * **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](http://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
     * Redesigned API and rewrote README to reflect new API. (*2014-02-03*)
     * Hackathon project to make a secure chat example (*[demo](http://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
-##Inactive Side Projects
+##Inactive/Finished Side Projects
+* **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](http://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
+    * Initial release (*2014-08-16*)
+* **[myLock](https://github.com/diafygi/myLock)** (*[demo](http://diafygi.github.io/myLock/)*) - myLock Easy Encryption, a javascript app and library that allows asymmetric encryption in a browser.
+    * Initial release (*2014-07-26*)
 * **[Offset248](https://github.com/diafygi/Offset248/)** - Binary encoding for the Unicode world. A simple technique for encoding binary to text that can be easily copied and pasted. (*2014*)
 * **[Keen Casa](https://github.com/diafygi/keencasa/)** (*[demo](http://www.keencasa.com/)*, *[video](https://www.youtube.com/watch?v=RQBdhjic-58)*) - The Mint.com for Internet of Things. Created this prototype and pitch with a team at ProtoHack San Francisco. We got into the top five finalists (out of 40 entries). (*2014*)
 * **[Base58 encoder/decoder](https://gist.github.com/diafygi/90a3e80ca1c2793220e5/)** (*[demo](https://rawgit.com/diafygi/90a3e80ca1c2793220e5/raw/ab5f00af7ba9e150179d2aef9ff3d8d894b6265b/test.html)*) - A fun [140byt.es](http://www.140byt.es/) project to make the smallest base 58 encoder and decoder possible in javascript. (*2014*)
