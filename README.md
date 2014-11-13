@@ -12,6 +12,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
     * Hackathon project to make a secure chat example (*[demo](http://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
 ##Inactive/Finished Side Projects
+* **[The Next "Internet"](http://www.pvsolarreport.com/the-next-internet/)** - An short article I wrote for PV Solar Report about the energy revolution. (*2014-11-12*)
 * **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](http://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
     * Initial release (*2014-08-16*)
 * **[myLock](https://github.com/diafygi/myLock)** (*[demo](http://diafygi.github.io/myLock/)*) - myLock Easy Encryption, a javascript app and library that allows asymmetric encryption in a browser.
