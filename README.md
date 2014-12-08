@@ -12,6 +12,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
     * Hackathon project to make a secure chat example (*[demo](http://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
 ##Inactive/Finished Side Projects
+* **[PPark](https://github.com/diafygi/ppark)** - A simple app that guides you into a parallel parking space using the Toyota CAN Gateway API via bluetooth. Made for the OnRamp 2014 hackathon. (*2014-12-07*)
 * **[The Next "Internet"](http://www.pvsolarreport.com/the-next-internet/)** - An short article I wrote for PV Solar Report about the energy revolution. (*2014-11-12*)
 * **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](http://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
     * Initial release (*2014-08-16*)
