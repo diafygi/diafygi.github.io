@@ -4,6 +4,8 @@
 Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love side projects, and here is where I link to them all. See [LinkedIn](http://www.linkedin.com/pub/daniel-roesler/41/491/739) for stuff I get paid to do.
 
 ##Active Side Projects
+* **[PublicKey.js](https://github.com/diafygi/publickeyjs)** (*[demo](https://diafygi.github.io/publickeyjs/)*) - A javascript library for easily searching for and retrieving PGP public keys from SKS and Keybase keyservers.
+    * Initial release (*2015-01-12*)
 * **[Ballot API](https://www.ballotapi.com/)** (*[code](http://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
     * First attempt at API docs (*2014-11-03*)
 * **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](http://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
