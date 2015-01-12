@@ -6,19 +6,19 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
 ##Active Side Projects
 * **[PublicKey.js](https://github.com/diafygi/publickeyjs)** (*[demo](https://diafygi.github.io/publickeyjs/)*) - A javascript library for easily searching for and retrieving PGP public keys from SKS and Keybase keyservers.
     * Initial release (*2015-01-12*)
-* **[Ballot API](https://www.ballotapi.com/)** (*[code](http://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
+* **[Ballot API](https://www.ballotapi.com/)** (*[code](https://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
     * First attempt at API docs (*2014-11-03*)
-* **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](http://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
+* **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](https://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
     * Redesigned API and rewrote README to reflect new API. (*2014-02-03*)
-    * Hackathon project to make a secure chat example (*[demo](http://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
+    * Hackathon project to make a secure chat example (*[demo](https://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
 ##Inactive/Finished Side Projects
 * **[PPark](https://github.com/diafygi/ppark)** - A simple app that guides you into a parallel parking space using the Toyota CAN Gateway API via bluetooth. Made for the OnRamp 2014 hackathon. (*2014-12-07*)
 * **[The Next "Internet"](http://www.pvsolarreport.com/the-next-internet/)** - An short article I wrote for PV Solar Report about the energy revolution. (*2014-11-12*)
-* **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](http://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
+* **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](https://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
     * Initial release (*2014-08-16*)
-* **[myLock](https://github.com/diafygi/myLock)** (*[demo](http://diafygi.github.io/myLock/)*) - myLock Easy Encryption, a javascript app and library that allows asymmetric encryption in a browser.
+* **[myLock](https://github.com/diafygi/myLock)** (*[demo](https://diafygi.github.io/myLock/)*) - myLock Easy Encryption, a javascript app and library that allows asymmetric encryption in a browser.
     * Initial release (*2014-07-26*)
 * **[Offset248](https://github.com/diafygi/Offset248/)** - Binary encoding for the Unicode world. A simple technique for encoding binary to text that can be easily copied and pasted. (*2014*)
 * **[Keen Casa](https://github.com/diafygi/keencasa/)** (*[demo](http://www.keencasa.com/)*, *[video](https://www.youtube.com/watch?v=RQBdhjic-58)*) - The Mint.com for Internet of Things. Created this prototype and pitch with a team at ProtoHack San Francisco. We got into the top five finalists (out of 40 entries). (*2014*)
@@ -27,7 +27,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
     * Started nightly builds for three branches: master, v1.2, and v1.3. (*2013-12-28*)
     * [Bug #965180](https://bugzilla.mozilla.org/show_bug.cgi?id=965180) is preventing me from building. (*2014-01-29*)
 * **[Bullet Spinner](https://gist.github.com/diafygi/9614360)** (*[demo](https://rawgithub.com/diafygi/9614360/raw/9ce994e4f694d43daabb05a9fc19b0e09b740ba9/test.html)*) - A fun [140byt.es](http://www.140byt.es/) project to make an ajax-style loading spinner in fewer than 140 bytes of javascript. (*2014*)
-* **[d3 on cheap smartphones](https://github.com/diafygi/d3cheap)** (*[demo](http://diafygi.github.io/d3cheap)*, *[video](https://www.youtube.com/watch?v=T3MU3jxEye8)*) - Exploring the svg and d3 performance on $80 Android and Firefox OS smartphones. My first time messing around with Firefox OS. (*2013*)
+* **[d3 on cheap smartphones](https://github.com/diafygi/d3cheap)** (*[demo](https://diafygi.github.io/d3cheap)*, *[video](https://www.youtube.com/watch?v=T3MU3jxEye8)*) - Exploring the svg and d3 performance on $80 Android and Firefox OS smartphones. My first time messing around with Firefox OS. (*2013*)
 * **[Ascent Solar](https://github.com/diafygi/ascentsolar)** (*[demo](https://www.youtube.com/watch?v=5bNU8qsG9RA)*) - A developing world solar lantern inventory tracker that I helped code for the SFunCube solar hackathon. (*2013*)
 * **[HCSMP stats](https://github.com/diafygi/hcsmpstats)** - A simple statistics scraper for a Minecraft multiplayer server. My first time messing around with flask. (*2012*)
 * **[ViewDiff Recipe](http://www.pmwiki.org/wiki/Cookbook/ViewDiff)** - A PmWiki plugin that renders the differences between two page versions. (*2011*)
