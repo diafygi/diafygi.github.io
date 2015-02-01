@@ -6,8 +6,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
 ##Active Side Projects
 * **[Let's Encrypt Without Sudo](https://github.com/diafygi/letsencrypt-nosudo)** - A python script that will get your https certificate signed by the free Let's Encrypt certificate authority.
     * Initial release (*2015-01-18*)
-* **[PublicKey.js](https://github.com/diafygi/publickeyjs)** (*[demo](https://diafygi.github.io/publickeyjs/)*) - A javascript library for easily searching for and retrieving PGP public keys from SKS and Keybase keyservers.
-    * Initial release (*2015-01-12*)
+    * [Discussion](https://groups.google.com/a/letsencrypt.org/forum/#!topic/client-dev/JAqxSvXlln4) on how to offer something similar in the official Let's Encrypt client. (*2015-01-19*)
 * **[Ballot API](https://www.ballotapi.com/)** (*[code](https://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
     * First attempt at API docs (*2014-11-03*)
 * **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](https://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
@@ -16,6 +15,8 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
     * Hackathon project to make a secure chat example (*[demo](https://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
 ##Inactive/Finished Side Projects
+* **[IP Addresses via WebRTC's STUN](https://github.com/diafygi/webrtc-ips)** (*[demo](https://diafygi.github.io/webrtc-ips/)*) - A proof of concept that will allow you to see your local and public IP addresses in Javascript by extracting candidate messages from WebRTC's STUN protocol requests. (*2015-01-25*)
+* **[PublicKey.js](https://github.com/diafygi/publickeyjs)** (*[demo](https://diafygi.github.io/publickeyjs/)*) - A javascript library for easily searching for and retrieving PGP public keys from SKS and Keybase keyservers. (*2015-01-12*)
 * **[PPark](https://github.com/diafygi/ppark)** - A simple app that guides you into a parallel parking space using the Toyota CAN Gateway API via bluetooth. Made for the OnRamp 2014 hackathon. (*2014-12-07*)
 * **[The Next "Internet"](http://www.pvsolarreport.com/the-next-internet/)** - An short article I wrote for PV Solar Report about the energy revolution. (*2014-11-12*)
 * **[EmailPK](https://github.com/diafygi/emailpk)** (*[demo](https://diafygi.github.io/emailpk/)*) - Instant encrypted email, a javascript app and library that allows easy email encryption.
