@@ -14,7 +14,8 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
     * Redesigned API and rewrote README to reflect new API. (*2014-02-03*)
     * Hackathon project to make a secure chat example (*[demo](https://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
 
-##Inactive/Finished Side Projects
+##Finished/Inactive Side Projects
+* **[WebCryptoAPI Examples](https://github.com/diafygi/webcrypto-examples)** (*[demo](https://diafygi.github.io/webcrypto-examples/)*) - I couldn't find anywhere that had clear examples of WebCrytoAPI, so I wrote examples and made a live table with them. (*2015-02-22*)
 * **[IP Addresses via WebRTC's STUN](https://github.com/diafygi/webrtc-ips)** (*[demo](https://diafygi.github.io/webrtc-ips/)*) - A proof of concept that will allow you to see your local and public IP addresses in Javascript by extracting candidate messages from WebRTC's STUN protocol requests. (*2015-01-25*)
 * **[PublicKey.js](https://github.com/diafygi/publickeyjs)** (*[demo](https://diafygi.github.io/publickeyjs/)*) - A javascript library for easily searching for and retrieving PGP public keys from SKS and Keybase keyservers. (*2015-01-12*)
 * **[PPark](https://github.com/diafygi/ppark)** - A simple app that guides you into a parallel parking space using the Toyota CAN Gateway API via bluetooth. Made for the OnRamp 2014 hackathon. (*2014-12-07*)
