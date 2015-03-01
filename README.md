@@ -5,14 +5,16 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love si
 
 ##Active Side Projects
 * **[Let's Encrypt Without Sudo](https://github.com/diafygi/letsencrypt-nosudo)** - A python script that will get your https certificate signed by the free Let's Encrypt certificate authority.
-    * Initial release (*2015-01-18*)
     * [Discussion](https://groups.google.com/a/letsencrypt.org/forum/#!topic/client-dev/JAqxSvXlln4) on how to offer something similar in the official Let's Encrypt client. (*2015-01-19*)
+    * Initial release (*2015-01-18*)
 * **[Ballot API](https://www.ballotapi.com/)** (*[code](https://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
+    * Greg wrote a functioning server (*2015-02-24*)
     * First attempt at API docs (*2014-11-03*)
 * **[byoFS](https://github.com/diafygi/byoFS)** (*[demo](https://diafygi.github.io/byoFS/examples/diary/)*) - Bring your own filesystem, a javascript library that allows users to connect their own data storage backend to your webapp.
-    * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
-    * Redesigned API and rewrote README to reflect new API. (*2014-02-03*)
+    * Rewrote to use WebCryptoAPI instead of SJCL. (*2015-03-01*)
     * Hackathon project to make a secure chat example (*[demo](https://diafygi.github.io/byoFS/examples/chat/)*, *[video](https://www.youtube.com/watch?v=WTPimUSIWbI)*). Tied for 2nd place! (*2014-02-09*)
+    * Redesigned API and rewrote README to reflect new API. (*2014-02-03*)
+    * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
 
 ##Finished/Inactive Side Projects
 * **[WebCryptoAPI Examples](https://github.com/diafygi/webcrypto-examples)** (*[demo](https://diafygi.github.io/webcrypto-examples/)*) - I couldn't find anywhere that had clear examples of WebCrytoAPI, so I wrote examples and made a live table with them. (*2015-02-22*)
