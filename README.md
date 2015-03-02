@@ -4,6 +4,8 @@
 Welcome to Daylight Pirates, the personal homepage for Daniel Roesler. I love side projects, and here is where I link to them all. See [LinkedIn](http://www.linkedin.com/pub/daniel-roesler/41/491/739) for stuff I get paid to do.
 
 ##Active Side Projects
+* **[PGP Keyserver](https://sks.daylightpirates.org)** - This is a PGP keyserver to provide support for the GPG/SKS public key infrastructure pool.
+    * Server is up and running. (*2015-03-01*)
 * **[Let's Encrypt Without Sudo](https://github.com/diafygi/letsencrypt-nosudo)** - A python script that will get your https certificate signed by the free Let's Encrypt certificate authority.
     * [Discussion](https://groups.google.com/a/letsencrypt.org/forum/#!topic/client-dev/JAqxSvXlln4) on how to offer something similar in the official Let's Encrypt client. (*2015-01-19*)
     * Initial release (*2015-01-18*)
