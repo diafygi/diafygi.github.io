@@ -39,6 +39,6 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
 * **[HCSMP stats](https://github.com/diafygi/hcsmpstats)** - A simple statistics scraper for a Minecraft multiplayer server. My first time messing around with flask. (*2012*)
 * **[ViewDiff Recipe](http://www.pmwiki.org/wiki/Cookbook/ViewDiff)** - A PmWiki plugin that renders the differences between two page versions. (*2011*)
 * **[IMAPgrab](https://sourceforge.net/projects/imapgrab/)** - A python script and gui for backing up IMAP mail servers, including Gmail. My first android. (*2010*)
-* **[kitco-android](http://code.google.com/p/kitco-android/)** - A barebones gold spot price scraper. My first android app. (*2009*)
+* **[kitco-android](https://github.com/diafygi/kitco-android/)** - A barebones gold spot price scraper. My first android app. (*2009*)
 * **[PageFeed Recipe](http://www.pmwiki.org/wiki/Cookbook/PageFeed)** - A PmWiki plugin that generates an RSS feed from a wiki page's history. (*2009*)
 * **[MailListForm Recipe](http://www.pmwiki.org/wiki/Cookbook/MailListForm)** - A PmWiki plugin that inserts a mailing list registration form. (*2008*)
