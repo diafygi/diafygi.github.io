@@ -20,6 +20,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
 
 ##Finished/Inactive Side Projects
+* **[Keyserver Elasticsearch](https://keyserver-elasticsearch.daylightpirates.org)** (*[docs](https://github.com/diafygi/keyserver-elasticsearch)*) - This is a dump of the SKS keyserver pool database into an elasticsearch instance so that researchers can do complex searches on the SKS public key infrastructure. (*2015-04-05*)
 * **[PGP Keyserver](https://sks.daylightpirates.org)** - This is a PGP keyserver to provide support for the GPG/SKS public key infrastructure pool. When you run `gpg --recv-key 72EFEE3D`, you might be pulling from this server :)
 * **[WebCryptoAPI Examples](https://github.com/diafygi/webcrypto-examples)** (*[demo](https://diafygi.github.io/webcrypto-examples/)*) - I couldn't find anywhere that had clear examples of WebCrytoAPI, so I wrote examples and made a live table with them. (*2015-02-22*)
 * **[IP Addresses via WebRTC's STUN](https://github.com/diafygi/webrtc-ips)** (*[demo](https://diafygi.github.io/webrtc-ips/)*) - A proof of concept that will allow you to see your local and public IP addresses in Javascript by extracting candidate messages from WebRTC's STUN protocol requests. (*2015-01-25*)
