@@ -20,6 +20,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
 
 ##Finished/Inactive Side Projects
+* **[Firefox Detect Throwaways](https://github.com/diafygi/detect-throwaways)** (*[demo](https://diafygi.github.io/detect-throwaways/index.html)*) - This is a demo that exploits [Bug #1100154](https://bugzilla.mozilla.org/show_bug.cgi?id=1100154) in Firefox to potentially compromise the identity of throwaway account users on social media sites.
 * **[Keyserver Elasticsearch](https://keyserver-elasticsearch.daylightpirates.org)** (*[docs](https://github.com/diafygi/keyserver-elasticsearch)*) - This is a dump of the SKS keyserver pool database into an elasticsearch instance so that researchers can do complex searches on the SKS public key infrastructure. (*2015-04-05*)
 * **[PGP Keyserver](https://sks.daylightpirates.org)** - This is a PGP keyserver to provide support for the GPG/SKS public key infrastructure pool. When you run `gpg --recv-key 72EFEE3D`, you might be pulling from this server :)
 * **[WebCryptoAPI Examples](https://github.com/diafygi/webcrypto-examples)** (*[demo](https://diafygi.github.io/webcrypto-examples/)*) - I couldn't find anywhere that had clear examples of WebCrytoAPI, so I wrote examples and made a live table with them. (*2015-02-22*)
