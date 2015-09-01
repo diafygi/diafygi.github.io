@@ -20,6 +20,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
 
 ##Finished/Inactive Side Projects
+* **[SKS gossip network](http://bl.ocks.org/diafygi/3f344c22f8a37a7b2151)** (*[code](https://gist.github.com/diafygi/3f344c22f8a37a7b2151)*) - This is a visualization of the SKS keyserver pool gossip network. Note how many peers are outside of the pool. (*2015-09-01*)
 * **[An Open Letter to News Sites](/index.html?posts/2015-06-12_https-media.md)** - This is an open letter I wrote to news media website owners calling for them to start using https by default. (*2015-06-12*)
 * **[GNU Pricing](https://github.com/diafygi/gnu-pricing)** (*[announcement](https://diafygi.github.io/gnu-pricing/website/)*) - This is a satire project that I created for the [Stupid Shit No One Needs & Terrible Ideas Hackathon](https://stupidhackathon.github.io/) that wraps all of the GNU command line tools with a pricing model, so that you have to pay to use `ls`, `grep`, `gcc`, etc. (*2015-05-10*)
 * **[Firefox Detect Throwaways](https://github.com/diafygi/detect-throwaways)** (*[demo](https://diafygi.github.io/detect-throwaways/index.html)*) - This is a demo that exploits [Bug #1100154](https://bugzilla.mozilla.org/show_bug.cgi?id=1100154) in Firefox to potentially compromise the identity of throwaway account users on social media sites.
