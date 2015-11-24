@@ -4,6 +4,8 @@
 Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key](https://sks.daylightpirates.org/pks/lookup?op=get&search=0xE7F6FAD172EFEE3D)). I love side projects, and here is where I link to them all. See [LinkedIn](http://www.linkedin.com/pub/daniel-roesler/41/491/739) for stuff I get paid to do.
 
 ##Active Side Projects
+* **[Get HTTPS for free!](https://gethttpsforfree.com/)** (*[code](https://github.com/diafygi/gethttpsforfree)*)- A browser-based ACME client that allows people to get free HTTPS certificates from Let's Encrypt without having to install anything.
+    * Initial release (*2015-11-23*)
 * **[openpgp-python](https://github.com/diafygi/openpgp-python)** - A python library that can parse and generate OpenPGP packets.
     * Can parse the full SKS keyserver dump (*2015-04-05*)
     * Initial release (*2015-03-30*)
