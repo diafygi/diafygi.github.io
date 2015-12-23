@@ -6,10 +6,13 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
 ##Active Side Projects
 * **[Get HTTPS for free!](https://gethttpsforfree.com/)** (*[code](https://github.com/diafygi/gethttpsforfree)*)- A browser-based ACME client that allows people to get free HTTPS certificates from Let's Encrypt without having to install anything.
     * Initial release (*2015-11-23*)
+* **[ACME-tiny](https://github.com/diafygi/acme-tiny)** - A tiny python script that will automate free https certificate issuing and renewing using the ACME protocol from Let's Encrypt.
+    * Initial release (*2015-11-25*)
+    * Added tests (*2015-12-05*)
 * **[openpgp-python](https://github.com/diafygi/openpgp-python)** - A python library that can parse and generate OpenPGP packets.
     * Can parse the full SKS keyserver dump (*2015-04-05*)
     * Initial release (*2015-03-30*)
-* **[Let's Encrypt Without Sudo](https://github.com/diafygi/letsencrypt-nosudo)** - A python script that will get your https certificate signed by the free Let's Encrypt certificate authority.
+* **[Let's Encrypt Without Sudo](https://github.com/diafygi/letsencrypt-nosudo)** - A python script that will get your https certificate signed by the free Let's Encrypt certificate authority without asking for your private keys or sudo permissions.
     * [Discussion](https://groups.google.com/a/letsencrypt.org/forum/#!topic/client-dev/JAqxSvXlln4) on how to offer something similar in the official Let's Encrypt client. (*2015-01-19*)
     * Initial release (*2015-01-18*)
 * **[Ballot API](https://www.ballotapi.com/)** (*[code](https://github.com/diafygi/ballotapi)*) - A Code for America project that answers the question, "What will be on my ballot?"
