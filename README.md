@@ -25,6 +25,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
 
 ##Finished/Inactive Side Projects
+* **[Privacy Checklist](https://github.com/diafygi/privacy-checklist)** - A checklist of privacy links that I built for the Common Cause [Media and Democracy Summit](http://act-ca.commoncause.org/site/Calendar?id=103466&view=Detail). (*2016-02-20*)
 * **[WebCryptoAPI Overview](https://docs.google.com/presentation/d/1LbJcPulQ_a4utqNCUoGCk8GTQbchN2BL_kAF3DNJQbo/edit?usp=sharing)** - A talk I gave at HTML5DevConf 2015 about the [Web Cryptography API](http://www.w3.org/TR/WebCryptoAPI/). (*2015-10-19*)
 * **[SKS gossip network](http://bl.ocks.org/diafygi/3f344c22f8a37a7b2151)** (*[code](https://gist.github.com/diafygi/3f344c22f8a37a7b2151)*) - This is a visualization of the SKS keyserver pool gossip network. Note how many peers are outside of the pool. (*2015-09-01*)
 * **[An Open Letter to News Sites](/index.html?posts/2015-06-12_https-media.md)** - This is an open letter I wrote to news media website owners calling for them to start using https by default. (*2015-06-12*)
