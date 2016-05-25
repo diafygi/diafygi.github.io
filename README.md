@@ -25,6 +25,7 @@ Welcome to Daylight Pirates, the personal homepage for Daniel Roesler ([PGP key]
     * Started as my project for the Aaron Swartz Memorial Hackathon (project was called "Bring Your Own Data"). (*2013*)
 
 ##Finished/Inactive Side Projects
+* **[HSTS on the SKS pool](/index.html?posts/2016-05-25_hsts-hkps.md)** - This is how I configure my nginx server to handle https while still being a part of the sks-keyserver pool. (*2016-05-25*)
 * **[Solar Tetris](https://github.com/diafygi/solartetris)** (*[demo](https://diafygi.github.io/solartetris/)*) - A hackathon project for the 2016 [Powerhouse](http://suncode.devpost.com/) [SunCode hackathon](http://suncode.devpost.com/). (*2016-05-14*)
 * **[Privacy Checklist](https://github.com/diafygi/privacy-checklist)** - A checklist of privacy links that I built for the Common Cause [Media and Democracy Summit](http://act-ca.commoncause.org/site/Calendar?id=103466&view=Detail). (*2016-02-20*)
 * **[WebCryptoAPI Overview](https://docs.google.com/presentation/d/1LbJcPulQ_a4utqNCUoGCk8GTQbchN2BL_kAF3DNJQbo/edit?usp=sharing)** - A talk I gave at HTML5DevConf 2015 about the [Web Cryptography API](http://www.w3.org/TR/WebCryptoAPI/). (*2015-10-19*)
