@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABkklEQVQ4y5XTTyjDcRjH8ZktpciStubgagclKRdhlJHSctqFqE3tpHaY9ieH5SCR06LECaHsMC4cHJCSlEKZcHSQgz9J+fd4f/VdLY3Nr16XX8/z2fN9vvsZRMTwE087dvGCe2yiJmttluYO3Sg/PKMqn4ATXGYJUCb+DOApwZbFYhGbzSYOh0PsdrtYrVYxm82qYDxXQEE8Hr/zeDzi9/sllUpJMpkUt9stgUDg3ev1LuY6QmkwGHxU47pcLnE6nQ+xWExMJpMYjUZJJBKrOXcQDofPIpHI968S1M9RHkKhkESjUfH5fH35LNGMMbziCR+4QXNe16hDptGqloYYutHyn4A5DKABjThG3a8BKl3f/aC6CTjxlnH/2zChDFEcolz3fjdc4Bzv2EEn2jCCgD7CFB51oNrNUjqgED167AN86qI7zGJG/ztPcYQ1bKjwdEATVrCMed2kRl7XH5H6Bq4wiSH0ogv16QAHbnWRerOPYdTqgmI94YKe6l7XXaMovUSVGEF1tk1n3E4FRrGHSvXuC5WDrZ5rvM/MAAAAAElFTkSuQmCC">
+        <title>Daylight Pirates - HSTS for SKS Keyservers</title>
+        <style>
+            body{font-family:Georgia,serif;text-align:center;}
+            h1,h2,h3,h4,h5{font-family:Verdana,sans-serif;}
+            #content{display:inline-block;max-width:800px;width:100%;text-align:left;}
+            pre{overflow-x:auto;border:1px solid #eeeeee;padding:1em;}
+
+            /* Pygments theme: friendly */
+            .highlight .c,.highlight .c1,.highlight .cm,.highlight .ge,.highlight .sd,.highlight .si{font-style:italic}
+            .highlight .hll{background-color:#ffc}.highlight .c{color:#60a0b0}.highlight .err{border:1px solid red}
+            .highlight .k{color:#007020;font-weight:700}.highlight .o{color:#666}.highlight .cm{color:#60a0b0}
+            .highlight .cp{color:#007020}.highlight .c1{color:#60a0b0}.highlight .cs{color:#60a0b0;background-color:#fff0f0}
+            .highlight .gd{color:#A00000}.highlight .gr{color:red}.highlight .gh{color:navy;font-weight:700}.highlight .gi{color:#00A000}
+            .highlight .go{color:grey}.highlight .gp{color:#c65d09;font-weight:700}.highlight .gs{font-weight:700}
+            .highlight .gu{color:purple;font-weight:700}.highlight .gt{color:#0040D0}
+            .highlight .kc,.highlight .kd,.highlight .kn{color:#007020;font-weight:700}.highlight .kp{color:#007020}
+            .highlight .kr{color:#007020;font-weight:700}.highlight .kt{color:#902000}.highlight .m{color:#40a070}
+            .highlight .na,.highlight .s{color:#4070a0}.highlight .nb{color:#007020}.highlight .nc{color:#0e84b5;font-weight:700}
+            .highlight .no{color:#60add5}.highlight .nd{color:#555;font-weight:700}.highlight .ni{color:#d55537;font-weight:700}
+            .highlight .ne{color:#007020}.highlight .nf{color:#06287e}.highlight .nl{color:#002070;font-weight:700}
+            .highlight .nn{color:#0e84b5;font-weight:700}.highlight .nt{color:#062873;font-weight:700}.highlight .nv{color:#bb60d5}
+            .highlight .ow{color:#007020;font-weight:700}.highlight .w{color:#bbb}
+            .highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#40a070}
+            .highlight .s2,.highlight .sb,.highlight .sc,.highlight .se,.highlight .sh{color:#4070a0}
+            .highlight .sd{color:#4070a0}.highlight .se{font-weight:700}.highlight .si{color:#70a0d0}
+            .highlight .sx{color:#c65d09}.highlight .sr{color:#235388}.highlight .s1{color:#4070a0}.highlight .ss{color:#517918}
+            .highlight .bp{color:#007020}.highlight .vc,.highlight .vg,.highlight .vi{color:#bb60d5}.highlight .il{color:#40a070}
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h1>HSTS for SKS Keyservers</h1>
+            <p>
+                Every website should be using HTTPS by default, and ideally use HTTPS Strict Transport
+                Security (HSTS). However, running a server in the SKS keyserver pool makes this tricky.
+                Here's how I have my setup that works okay.
+            </p>
+
+            <h3>Config features</h3>
+            <ul>
+                <li>Normal valid certificate for <a href="https://sks.daylightpirates.org/">https://sks.daylightpirates.org/</a> (https for normal visitors)</li>
+                <li>HKPS certificate for <a href="https://hkps.pool.sks-keyservers.net/">https://hkps.pool.sks-keyservers.net/</a> (needed for HKPS pool inclusion)</li>
+                <li>Unencrypted HKP for <a href="http://pool.sks-keyservers.net:11371/">http://pool.sks-keyservers.net:11371/</a> (needed for HKP pool inclusion)</li>
+                <li>Unencrypted for domain <a href="http://sks.daylightpirates.org:11371/">http://sks.daylightpirates.org:11371/</a> (needed for links from HKP pool)</li>
+                <li>No redirect for unencrypted <a href="http://sks.daylightpirates.org/">http://sks.daylightpirates.org/</a> (needed for Port 80 flag in the pool checker)</li>
+                <li>Let's Encrypt certificate compatibility on port 80 (for automatically renewing https certs)</li>
+            </ul>
+
+            <h3>Downsides</h3>
+            <p>
+                If you visit my domain's normal https port 443
+                (<a href="https://sks.daylightpirates.org/">https://sks.daylightpirates.org/</a>),
+                your browser will cache the HSTS property, so if you try to visit the HKP port (11371),
+                you will be automatically try to load a TLS certificate, which can't being served,
+                so you'll get a "Secure Connection Failed" error in your browser. However, if you
+                haven't visited my domain normally (e.g. if you get linked to
+                <a href="http://sks.daylightpirates.org:11371/">http://sks.daylightpirates.org:11371/</a>
+                from the sks-keyservers.net website), you won't
+                know that the domain is using HSTS, so the page will load fine.
+            </p>
+            <p>
+                In normal practice, this usually isn't a big deal because the people who come to my
+                keyserver via sks-keyservers.net are likely not the same people who go to my keyserver
+                from somewhere else on my domain (which would mean they have the HSTS cache).
+            </p>
+
+            <h3>Nginx config</h3>
+<!-- Rendered using http://pygments.org/ -->
+<pre class="highlight">
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="n">104.131.30.118</span><span class="p">:</span><span class="mi">443</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[2604:a880:800:10::688:e001]:443</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">sks.daylightpirates.org</span><span class="p">;</span>
+
+    <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+    <span class="kn">ssl_certificate</span> <span class="s">sks.daylightpirates.org.crt</span><span class="p">;</span>
+    <span class="kn">ssl_certificate_key</span> <span class="s">sks.daylightpirates.org.key</span><span class="p">;</span>
+    <span class="kn">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+    <span class="kn">ssl_protocols</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+    <span class="kn">ssl_ciphers</span> <span class="s">ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA</span><span class="p">;</span>
+    <span class="kn">ssl_dhparam</span> <span class="s">/etc/nginx/sks.daylightpirates.org.dhparam</span><span class="p">;</span>
+    <span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:50m</span><span class="p">;</span>
+    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+
+    <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://127.0.0.1:11371/</span><span class="p">;</span>
+        <span class="kn">proxy_pass_header</span> <span class="s">Server</span><span class="p">;</span>
+        <span class="kn">add_header</span> <span class="s">Via</span> <span class="s">"1.1</span> <span class="n">sks.daylightpirates.org</span><span class="p">:</span><span class="mi">11371</span> <span class="s">(nginx)"</span><span class="p">;</span>
+        <span class="kn">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">"max-age=63072000</span><span class="p">;</span> <span class="kn">includeSubdomains</span><span class="p">;</span> <span class="kn">preload"</span><span class="p">;</span>
+        <span class="kn">proxy_ignore_client_abort</span> <span class="no">on</span><span class="p">;</span>
+        <span class="kn">client_max_body_size</span> <span class="mi">8m</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="n">104.131.30.118</span><span class="p">:</span><span class="mi">443</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[2604:a880:800:10::688:e001]:443</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.sks-keyservers.net</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.pool.sks-keyservers.net</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">keys.gnupg.net</span><span class="p">;</span>
+
+    <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+    <span class="kn">ssl_certificate</span> <span class="s">pool.sks-keyservers.net.crt</span><span class="p">;</span>
+    <span class="kn">ssl_certificate_key</span> <span class="s">pool.sks-keyservers.net.key</span><span class="p">;</span>
+    <span class="kn">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+    <span class="kn">ssl_protocols</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+    <span class="kn">ssl_ciphers</span> <span class="s">ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA</span><span class="p">;</span>
+    <span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:50m</span><span class="p">;</span>
+    <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+
+    <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://127.0.0.1:11371/</span><span class="p">;</span>
+        <span class="kn">proxy_pass_header</span> <span class="s">Server</span><span class="p">;</span>
+        <span class="kn">add_header</span> <span class="s">Via</span> <span class="s">"1.1</span> <span class="n">sks.daylightpirates.org</span><span class="p">:</span><span class="mi">11371</span> <span class="s">(nginx)"</span><span class="p">;</span>
+        <span class="kn">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">"max-age=63072000</span><span class="p">;</span> <span class="kn">includeSubdomains</span><span class="p">;</span> <span class="kn">preload"</span><span class="p">;</span>
+        <span class="kn">proxy_ignore_client_abort</span> <span class="no">on</span><span class="p">;</span>
+        <span class="kn">client_max_body_size</span> <span class="mi">8m</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="n">104.131.30.118</span><span class="p">:</span><span class="mi">11371</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[2604:a880:800:10::688:e001]:11371</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">sks.daylightpirates.org</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.sks-keyservers.net</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.pool.sks-keyservers.net</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">keys.gnupg.net</span><span class="p">;</span>
+
+    <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://127.0.0.1:11371/</span><span class="p">;</span>
+        <span class="kn">proxy_pass_header</span> <span class="s">Server</span><span class="p">;</span>
+        <span class="kn">add_header</span> <span class="s">Via</span> <span class="s">"1.1</span> <span class="n">sks.daylightpirates.org</span><span class="p">:</span><span class="mi">11371</span> <span class="s">(nginx)"</span><span class="p">;</span>
+        <span class="kn">proxy_ignore_client_abort</span> <span class="no">on</span><span class="p">;</span>
+        <span class="kn">client_max_body_size</span> <span class="mi">8m</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="n">104.131.30.118</span><span class="p">:</span><span class="mi">80</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[2604:a880:800:10::688:e001]:80</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">sks.daylightpirates.org</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.sks-keyservers.net</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">*.pool.sks-keyservers.net</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="s">keys.gnupg.net</span><span class="p">;</span>
+
+    <span class="kn">access_log</span> <span class="no">off</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/.well-known/acme-challenge/</span> <span class="p">{</span>
+        <span class="kn">alias</span> <span class="s">/home/acme/challenges/</span><span class="p">;</span>
+        <span class="kn">try_files</span> <span class="nv">$uri</span> <span class="p">=</span><span class="mi">404</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://127.0.0.1:11371/</span><span class="p">;</span>
+        <span class="kn">proxy_pass_header</span> <span class="s">Server</span><span class="p">;</span>
+        <span class="kn">add_header</span> <span class="s">Via</span> <span class="s">"1.1</span> <span class="n">sks.daylightpirates.org</span><span class="p">:</span><span class="mi">11371</span> <span class="s">(nginx)"</span><span class="p">;</span>
+        <span class="kn">proxy_ignore_client_abort</span> <span class="no">on</span><span class="p">;</span>
+        <span class="kn">client_max_body_size</span> <span class="mi">8m</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+
+            <p><em>Published 2016-05-25 on <a href="https://daylightpirates.org/">daylightpirates.org</a></em></p>
+        </div>
+    </body>
+</html>
