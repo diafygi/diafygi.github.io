@@ -1,375 +1,420 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABkklEQVQ4y5XTTyjDcRjH8ZktpciStubgagclKRdhlJHSctqFqE3tpHaY9ieH5SCR06LECaHsMC4cHJCSlEKZcHSQgz9J+fd4f/VdLY3Nr16XX8/z2fN9vvsZRMTwE087dvGCe2yiJmttluYO3Sg/PKMqn4ATXGYJUCb+DOApwZbFYhGbzSYOh0PsdrtYrVYxm82qYDxXQEE8Hr/zeDzi9/sllUpJMpkUt9stgUDg3ev1LuY6QmkwGHxU47pcLnE6nQ+xWExMJpMYjUZJJBKrOXcQDofPIpHI968S1M9RHkKhkESjUfH5fH35LNGMMbziCR+4QXNe16hDptGqloYYutHyn4A5DKABjThG3a8BKl3f/aC6CTjxlnH/2zChDFEcolz3fjdc4Bzv2EEn2jCCgD7CFB51oNrNUjqgED167AN86qI7zGJG/ztPcYQ1bKjwdEATVrCMed2kRl7XH5H6Bq4wiSH0ogv16QAHbnWRerOPYdTqgmI94YKe6l7XXaMovUSVGEF1tk1n3E4FRrGHSvXuC5WDrZ5rvM/MAAAAAElFTkSuQmCC">
-        <title>Daylight Pirates</title>
-        <style>
-            body{font-family:Georgia,serif;text-align:center;}
-            h1,h2,h3,h4,h5{font-family:Verdana,sans-serif;}
-            #content{display:inline-block;width:100%;max-width:800px;text-align:left;}
-        </style>
-    </head>
-    <body>
-        <div id="content">
-            <p>
-                <img src="data:image/png;base64,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" title="Daylight Pirates logo">
-            </p>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABkklEQVQ4y5XTTyjDcRjH8ZktpciStubgagclKRdhlJHSctqFqE3tpHaY9ieH5SCR06LECaHsMC4cHJCSlEKZcHSQgz9J+fd4f/VdLY3Nr16XX8/z2fN9vvsZRMTwE087dvGCe2yiJmttluYO3Sg/PKMqn4ATXGYJUCb+DOApwZbFYhGbzSYOh0PsdrtYrVYxm82qYDxXQEE8Hr/zeDzi9/sllUpJMpkUt9stgUDg3ev1LuY6QmkwGHxU47pcLnE6nQ+xWExMJpMYjUZJJBKrOXcQDofPIpHI968S1M9RHkKhkESjUfH5fH35LNGMMbziCR+4QXNe16hDptGqloYYutHyn4A5DKABjThG3a8BKl3f/aC6CTjxlnH/2zChDFEcolz3fjdc4Bzv2EEn2jCCgD7CFB51oNrNUjqgED167AN86qI7zGJG/ztPcYQ1bKjwdEATVrCMed2kRl7XH5H6Bq4wiSH0ogv16QAHbnWRerOPYdTqgmI94YKe6l7XXaMovUSVGEF1tk1n3E4FRrGHSvXuC5WDrZ5rvM/MAAAAAElFTkSuQmCC">
+            <title>Daylight Pirates</title>
+            <style>
+                /* simple page styling */
+                body{font-family:Georgia,serif;margin:0;padding:0;}
+                body > div{display:block;width:100%;padding:0.5em 1em;text-align:center;box-sizing:border-box;}
+                h1,h2,h3,h4,h5{font-family:Verdana,sans-serif;}
+                #content{display:inline-block;width:100%;max-width:800px;text-align:left;}
+                /* display mode toggle */
+                input[name=display-mode]{display:none;}
+                #mode-toggle{text-align:right;font-size:80%;}
+                /* default light mode */
+                label[for=light-mode]{text-decoration:underline;cursor:pointer;display:none;}
+                label[for=dark-mode]{text-decoration:underline;cursor:pointer;display:inline;}
+                #logo-light{display:inline;}
+                #logo-dark{display:none;}
+                /* default dark mode */
+                @media(prefers-color-scheme: dark){
+                    body > div{background-color:#000;color:#ddd;}
+                    a{color:#77f;}
+                    label[for=light-mode]{display:inline;}
+                    label[for=dark-mode]{display:none;}
+                    #logo-light{display:none;}
+                    #logo-dark{display:inline;}
+                }
+                /* explicit light mode */
+                #light-mode:checked ~ div{background-color:#fff;color:#000;}
+                #light-mode:checked ~ div a{color:#00f;}
+                #light-mode:checked ~ div #logo-light{display:inline;}
+                #light-mode:checked ~ div #logo-dark{display:none;}
+                #light-mode:checked ~ div label[for=light-mode]{display:none;}
+                #light-mode:checked ~ div label[for=dark-mode]{display:inline;}
+                /* explicit dark mode */
+                #dark-mode:checked ~ div{background-color:#000;color:#ddd;}
+                #dark-mode:checked ~ div a{color:#77f;}
+                #dark-mode:checked ~ div #logo-light{display:none;}
+                #dark-mode:checked ~ div #logo-dark{display:inline;}
+                #dark-mode:checked ~ div label[for=light-mode]{display:inline;}
+                #dark-mode:checked ~ div label[for=dark-mode]{display:none;}
+            </style>
+        </head>
+        <body>
+            <input type="radio" name="display-mode" id="light-mode">
+            <input type="radio" name="display-mode" id="dark-mode">
+            <div>
+                <div id="content">
+                    <p>
+                        <img id="logo-light" src="data:image/png;base64,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" title="Daylight Pirates logo">
+                        <img id="logo-dark" src="data:image/png;base64,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" title="Daylight Pirates logo">
+                    </p>
 
-            <h2>About</h2>
-            <p>
-                Welcome to Daylight Pirates, the personal homepage for Daniel Roesler
-                (<a href="https://keybase.io/diafygi/pgp_keys.asc">PGP key</a>).
-                I love side projects, and here is where I link to them all. See
-                <a href="http://www.linkedin.com/pub/daniel-roesler/41/491/739">LinkedIn</a>
-                for stuff I get paid to do.
-            </p>
+                    <h2>About</h2>
+                    <p>
+                        Welcome to Daylight Pirates, the personal homepage for Daniel Roesler
+                        (<a href="https://keybase.io/diafygi/pgp_keys.asc">PGP key</a>).
+                        I love side projects, and here is where I link to them all. See
+                        <a href="http://www.linkedin.com/pub/daniel-roesler/41/491/739">LinkedIn</a>
+                        for stuff I get paid to do.
+                    </p>
 
-            <h2>Active Side Projects</h2>
-            <ul>
-                <li>
-                    <strong><a href="https://github.com/open-austin/purge-alert">Purge Alert</a></strong> -
-                    A browser extension that lets your monitor your voter registration, so you can see if you get purged from the voter rolls.
+                    <h2>Active Side Projects</h2>
                     <ul>
-                        <li>First voter registration check (<em>2020-02-21</em>)</li>
-                        <li>Started the project (<em>2020-01-13</em>)</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong><a href="https://ballotapi.org/">Ballot API</a></strong>
-                    (<em><a href="https://github.com/open-austin/ballotapi">code</a></em>) -
-                    A free, public-domain database and API of all U.S. ballots and precinct shapefiles.
-                    <ul>
-                        <li>New website design! <a href="https://ballotapi.org/">ballotapi.org</a> (<em>2020-01-09</em>)</li>
-                        <li>Basic tests for framework (<em>2020-12-02</em>)</li>
-                        <li>Prototype webserver (<em>2020-08-24</em>)</li>
-                        <li>Docs! <a href="https://ballotapi.org/docs">ballotapi.org/docs</a> (<em>2019-02-16</em>)</li>
-                        <li>Started re-writing docs (<em>2018-01-03</em>)</li>
-                        <li>Greg wrote a functioning server (<em>2015-02-24</em>)</li>
-                        <li>First attempt at API docs (<em>2014-11-03</em>)</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/acme-tiny">ACME-tiny</a></strong> -
-                    A tiny python script that will automate free https certificate
-                    issuing and renewing using the ACME protocol from Let's Encrypt.
-                    <ul>
-                        <li>Support for GET-as-POST (<em>2019-07-07</em>)</li>
-                        <li>Added ACME v2 support (<em>2018-04-13</em>)</li>
-                        <li>Initial release (<em>2015-11-25</em>)</li>
-                        <li>Added tests (<em>2015-12-05</em>)</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong><a href="https://gethttpsforfree.com/">Get HTTPS for free!</a></strong>
-                    (<em><a href="https://github.com/diafygi/gethttpsforfree">code</a></em>) -
-                    A browser-based ACME client that allows people to get free HTTPS
-                    certificates from Let's Encrypt without having to install anything.
-                    <ul>
-                        <li>Support GET-as-POST (<em>2020-03-07</em>)</li>
-                        <li>Added ACME v2 + wildcard domain support (<em>2018-04-13</em>)</li>
-                        <li>Initial release (<em>2015-11-23</em>)</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/byoFS">byoFS</a></strong>
-                    (<em><a href="https://diafygi.github.io/byoFS/examples/diary/">demo</a></em>) -
-                    Bring your own filesystem, a javascript library that allows users
-                    to connect their own data storage backend to your webapp.
-                    <ul>
-                        <li>Rewrote to use WebCryptoAPI instead of SJCL. (<em>2015-03-01</em>)</li>
                         <li>
-                            Hackathon project to make a secure chat example
-                            (<em><a href="https://diafygi.github.io/byoFS/examples/chat/">demo</a></em>,
-                            <em><a href="https://www.youtube.com/watch?v=WTPimUSIWbI">video</a></em>).
-                            Tied for 2nd place! (<em>2014-02-09</em>)
+                            <strong><a href="https://github.com/open-austin/purge-alert">Purge Alert</a></strong> -
+                            A browser extension that lets your monitor your voter registration, so you can see if you get purged from the voter rolls.
+                            <ul>
+                                <li>First voter registration check (<em>2020-02-21</em>)</li>
+                                <li>Started the project (<em>2020-01-13</em>)</li>
+                            </ul>
                         </li>
                         <li>
-                            Redesigned API and rewrote README to reflect new API.
-                            (<em>2014-02-03</em>)
+                            <strong><a href="https://ballotapi.org/">Ballot API</a></strong>
+                            (<em><a href="https://github.com/open-austin/ballotapi">code</a></em>) -
+                            A free, public-domain database and API of all U.S. ballots and precinct shapefiles.
+                            <ul>
+                                <li>New website design! <a href="https://ballotapi.org/">ballotapi.org</a> (<em>2020-01-09</em>)</li>
+                                <li>Basic tests for framework (<em>2020-12-02</em>)</li>
+                                <li>Prototype webserver (<em>2020-08-24</em>)</li>
+                                <li>Docs! <a href="https://ballotapi.org/docs">ballotapi.org/docs</a> (<em>2019-02-16</em>)</li>
+                                <li>Started re-writing docs (<em>2018-01-03</em>)</li>
+                                <li>Greg wrote a functioning server (<em>2015-02-24</em>)</li>
+                                <li>First attempt at API docs (<em>2014-11-03</em>)</li>
+                            </ul>
                         </li>
                         <li>
-                            Started as my project for the Aaron Swartz Memorial Hackathon
-                            (project was called "Bring Your Own Data"). (<em>2013</em>)
+                            <strong><a href="https://github.com/diafygi/acme-tiny">ACME-tiny</a></strong> -
+                            A tiny python script that will automate free https certificate
+                            issuing and renewing using the ACME protocol from Let's Encrypt.
+                            <ul>
+                                <li>Support for GET-as-POST (<em>2019-07-07</em>)</li>
+                                <li>Added ACME v2 support (<em>2018-04-13</em>)</li>
+                                <li>Initial release (<em>2015-11-25</em>)</li>
+                                <li>Added tests (<em>2015-12-05</em>)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><a href="https://gethttpsforfree.com/">Get HTTPS for free!</a></strong>
+                            (<em><a href="https://github.com/diafygi/gethttpsforfree">code</a></em>) -
+                            A browser-based ACME client that allows people to get free HTTPS
+                            certificates from Let's Encrypt without having to install anything.
+                            <ul>
+                                <li>Support GET-as-POST (<em>2020-03-07</em>)</li>
+                                <li>Added ACME v2 + wildcard domain support (<em>2018-04-13</em>)</li>
+                                <li>Initial release (<em>2015-11-23</em>)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/byoFS">byoFS</a></strong>
+                            (<em><a href="https://diafygi.github.io/byoFS/examples/diary/">demo</a></em>) -
+                            Bring your own filesystem, a javascript library that allows users
+                            to connect their own data storage backend to your webapp.
+                            <ul>
+                                <li>Rewrote to use WebCryptoAPI instead of SJCL. (<em>2015-03-01</em>)</li>
+                                <li>
+                                    Hackathon project to make a secure chat example
+                                    (<em><a href="https://diafygi.github.io/byoFS/examples/chat/">demo</a></em>,
+                                    <em><a href="https://www.youtube.com/watch?v=WTPimUSIWbI">video</a></em>).
+                                    Tied for 2nd place! (<em>2014-02-09</em>)
+                                </li>
+                                <li>
+                                    Redesigned API and rewrote README to reflect new API.
+                                    (<em>2014-02-03</em>)
+                                </li>
+                                <li>
+                                    Started as my project for the Aaron Swartz Memorial Hackathon
+                                    (project was called "Bring Your Own Data"). (<em>2013</em>)
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
 
-            <h2>Finished/Inactive Side Projects</h2>
-            <ul>
-                <li>
-                    <strong><a href="https://vax.codes/">Vax.Codes</a></strong>
-                    (<em><a href="https://github.com/open-austin/vax-codes">code</a></em>,
-                    <em><a href="https://www.youtube.com/watch?v=Z61_kLz6wbQ">video</a></em>) -
-                    An OpenAustin project showing how Covid-19 vaccine verification infrastructure can be free, easy, and open-source.
-                    (<em>2021-04-22</em>)
-                </li>
-                <li>
-                    <strong><a href="https://lwvaustin.org/pollworker">Runoff Rally</a></strong>
-                    (<em><a href="https://www.youtube.com/watch?v=HRDyrvI7PTI">video</a></em>) -
-                    A partnership between OpenAustin, The League of Women Voters, and Travis County to make a streamlined application process for poll workers during the pandemic.
-                    (<em>2020-11-26</em>)
-                </li>
-                <li>
-                    <strong><a href="https://freefacemaskcreator.com/">Free Face Mask Creator</a></strong>
-                    (<em><a href="https://github.com/open-austin/freefacemaskcreator">code</a></em>) -
-                    A web-based design tool that lets you add an image to a face mask and print out the pattern, so you can make your own personalized face masks.
-                    (<em>2020-06-05</em>)
-                </li>
-                <li>
-                    <strong><a href="https://www.youtube.com/watch?v=RnUaY9tqXnI">Did I actually vote for my candidate?</a></strong>
-                    (<em><a href="https://www.youtube.com/watch?v=RnUaY9tqXnI">video</a></em>,
-                    <em><a href="https://docs.google.com/presentation/d/1rFVlfI7S95LZDRLX6_5zdJVKwjZKkqMipg78atEDXpc/edit">slides</a></em>) -
-                    This is a talk I gave at EFF-Austin on how I manually verified the barcodes on my primary ballot. (<em>2020-05-12</em>)
-                </li>
-                <li>
-                    <strong><a href="https://www.youtube.com/watch?v=m_l1HZCasA4&t=16m54s">Energy Data Privacy: How Climate Changes Everything</a></strong>
-                    (<em><a href="https://www.youtube.com/watch?v=m_l1HZCasA4&t=16m54s">video</a></em>,
-                    <em><a href="uploads/2019-11-12_-_EFF-Austin_-_Energy_Data_Privacy_How_Climate_Changes_Everything.pdf">slides</a></em> [warning: buzzing audio]) -
-                    This is an updated verison of my energy data privacy talk I gave at the EFF-Austin Privacy Lab meetup. (<em>2019-11-12</em>)
-                </li>
-                <li>
-                    <strong><a href="https://www.youtube.com/watch?v=y_GKZzQ5xPo">Energy Data Privacy: How Climate Changes Everything</a></strong>
-                    (<em><a href="https://www.youtube.com/watch?v=y_GKZzQ5xPo">video</a></em>,
-                    <em><a href="uploads/2018-12-13_-_Privacy_Lab_-_Energy_Data_Privacy_How_Climate_Changes_Everything.pdf">slides</a></em>) -
-                    This is a talk I gave about energy data privacy at Mozilla's Privacy Lab meetup
-                    in the bay area. (<em>2018-12-13</em>)
-                </li>
-                <li>
-                    <strong><a href="https://diafygi.github.io/diceware-prettyprint/">Printer-Friendly Diceware</a></strong>
-                    (<em><a href="https://github.com/diafygi/diceware-prettyprint">code</a></em>) -
-                    Generates a easy-to-use printout of <a href="https://en.wikipedia.org/wiki/Diceware">Diceware</a>
-                    word lists so my mom can create strong passwords. (<em>2018-05-13</em>)
-                </li>
-                <li>
-                    <strong><a href="https://enron.network/">ENRON</a></strong>
-                    (<em><a href="https://www.youtube.com/watch?v=_XWy43NtnjY">video</a></em>) -
-                    Energy Network Research Organization Network (ENRON) is a project created
-                    for the <a href="https://suncode2018.devpost.com/">Powerhouse Suncode 2018</a>
-                    hackathon. ENRON is a team of experts that help find ways to arbitrage and
-                    manipulate energy blockchains. (<em>2018-04-14</em>)
-                </li>
-                <li>
-                    <strong><a href="https://sks.daylightpirates.org/">sks.daylightpirates.org</a></strong> -
-                    Run one of the OpenPGP keyservers in the <a href="https://sks-keyservers.net/status/">SKS keyserver pool</a>.
-                    This pool is a critical public key infrastructure (PKI) for the global community.
-                    When you run <code>gpg --recv-key 72EFEE3D</code>, you might be pulling from this server.
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/acme-nosudo">ACME Without Sudo</a></strong> -
-                    A python script that will get your https certificate signed by the
-                    free Let's Encrypt certificate authority without asking for your private
-                    keys or sudo permissions. (<em>2015-01-18</em>)
-                </li>
-                <li>
-                    <strong><a href="https://eb-to-ical.daylightpirates.org/">Eventbrite-to-iCal Converter</a></strong>
-                    (<em><a href="https://eb-to-ical.daylightpirates.org/">website</a>,
-                         <a href="https://github.com/diafygi/eb-to-ical">code</a></em>) -
-                    Nginx+Lua config that converts Eventbrite API to iCalenadar format. (<em>2017-11-26</em>)
-                </li>
-                <li>
-                    <strong><a href="https://diafygi.github.io/dice-css/">Dice.css</a></strong>
-                    (<em><a href="https://diafygi.github.io/dice-css/">demo</a>,
-                         <a href="https://github.com/diafygi/dice-css">code</a></em>) -
-                    A tiny css library for dice icons, only 867 bytes gzipped. (<em>2016-12-28</em>)
-                </li>
-                <li>
-                    <strong><a href="https://bayareaenergyevents.com/">Bay Area Energy Events</a></strong> -
-                    My public calendar of all the San Francisco Bay Area clean
-                    energy related events. (<em>2016-06-17</em>)
-                </li>
-                <li>
-                    <strong><a href="posts/2016-05-25_hsts-hkps/index.html">HSTS on the SKS pool</a></strong> -
-                    This is how I configure my nginx server to handle https while
-                    still being a part of the sks-keyserver pool. (<em>2016-05-25</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/solartetris">Solar Tetris</a></strong>
-                    (<em><a href="https://diafygi.github.io/solartetris/">demo</a></em>) -
-                    A hackathon project for the 2016 <a href="http://suncode.devpost.com/">Powerhouse</a>
-                    <a href="http://suncode.devpost.com/">SunCode hackathon</a>. (<em>2016-05-14</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/privacy-checklist">Privacy Checklist</a></strong> -
-                    A checklist of privacy links that I built for the Common Cause
-                    <a href="http://act-ca.commoncause.org/site/Calendar?id=103466&amp;view=Detail">Media and Democracy Summit</a>.
-                    (<em>2016-02-20</em>)
-                </li>
-                <li>
-                    <strong><a href="https://docs.google.com/presentation/d/1LbJcPulQ_a4utqNCUoGCk8GTQbchN2BL_kAF3DNJQbo/edit?usp=sharing">WebCryptoAPI Overview</a></strong> -
-                    A talk I gave at HTML5DevConf 2015 about the
-                    <a href="http://www.w3.org/TR/WebCryptoAPI/">Web Cryptography API</a>.
-                    (<em>2015-10-19</em>)
-                </li>
-                <li>
-                    <strong><a href="http://bl.ocks.org/diafygi/3f344c22f8a37a7b2151">SKS gossip network</a></strong>
-                    (<em><a href="https://gist.github.com/diafygi/3f344c22f8a37a7b2151">code</a></em>) -
-                    This is a visualization of the SKS keyserver pool gossip network.
-                    Note how many peers are outside of the pool. (<em>2015-09-01</em>)
-                </li>
-                <li>
-                    <strong><a href="posts/2015-06-12_https-media/index.html">An Open Letter to News Sites</a></strong> -
-                    This is an open letter I wrote to news media website owners
-                    calling for them to start using https by default. (<em>2015-06-12</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/gnu-pricing">GNU Pricing</a></strong>
-                    (<em><a href="https://diafygi.github.io/gnu-pricing/website/">announcement</a></em>) -
-                    This is a satire project that I created for the 
-                    <a href="https://stupidhackathon.github.io/">Stupid Shit No One Needs &amp; Terrible Ideas Hackathon</a>
-                    that wraps all of the GNU command line tools with a pricing model,
-                    so that you have to pay to use <code>ls</code>, <code>grep</code>,
-                    <code>gcc</code>, etc. (<em>2015-05-10</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/detect-throwaways">Firefox Detect Throwaways</a></strong>
-                    (<em><a href="https://diafygi.github.io/detect-throwaways/index.html">demo</a></em>) -
-                    This is a demo that exploits <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1100154">Bug #1100154</a>
-                    in Firefox to potentially compromise the identity of throwaway
-                    account users on social media sites.
-                </li>
-                <li>
-                    <strong><a href="https://keyserver-elasticsearch.daylightpirates.org/">Keyserver Elasticsearch</a></strong>
-                    (<em><a href="https://github.com/diafygi/keyserver-elasticsearch">docs</a></em>) -
-                    This is a dump of the SKS keyserver pool database into an
-                    elasticsearch instance so that researchers can do complex searches on
-                    the SKS public key infrastructure. (<em>2015-04-05</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/openpgp-python">openpgp-python</a></strong> -
-                    A python library that can parse and generate OpenPGP packets. (<em>2015-04-05</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/webcrypto-examples">WebCryptoAPI Examples</a></strong>
-                    (<em><a href="https://diafygi.github.io/webcrypto-examples/">demo</a></em>) -
-                    I couldn't find anywhere that had clear examples of WebCrytoAPI,
-                    so I wrote examples and made a live table with them.
-                    (<em>2015-02-22</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/webrtc-ips">IP Addresses via WebRTC's STUN</a></strong>
-                    (<em><a href="https://diafygi.github.io/webrtc-ips/">demo</a></em>) -
-                    A proof of concept that will allow you to see your local and public
-                    IP addresses in Javascript by extracting candidate messages from
-                    WebRTC's STUN protocol requests. (<em>2015-01-25</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/publickeyjs">PublicKey.js</a></strong>
-                    (<em><a href="https://diafygi.github.io/publickeyjs/">demo</a></em>) -
-                    A javascript library for easily searching for and retrieving
-                    PGP public keys from SKS and Keybase keyservers. (<em>2015-01-12</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/ppark">PPark</a></strong> -
-                    A simple app that guides you into a parallel parking space using the
-                    Toyota CAN Gateway API via bluetooth. Made for the OnRamp 2014
-                    hackathon. (<em>2014-12-07</em>)
-                </li>
-                <li>
-                    <strong><a href="http://www.pvsolarreport.com/the-next-internet/">The Next "Internet"</a></strong> -
-                    An short article I wrote for PV Solar Report about the energy revolution.
-                    (<em>2014-11-12</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/emailpk">EmailPK</a></strong>
-                    (<em><a href="https://diafygi.github.io/emailpk/">demo</a></em>) -
-                    Instant encrypted email, a javascript app and library that
-                    allows easy email encryption.
+                    <h2>Finished/Inactive Side Projects</h2>
                     <ul>
-                        <li>Initial release (<em>2014-08-16</em>)</li>
+                        <li>
+                            <strong><a href="https://vax.codes/">Vax.Codes</a></strong>
+                            (<em><a href="https://github.com/open-austin/vax-codes">code</a></em>,
+                            <em><a href="https://www.youtube.com/watch?v=Z61_kLz6wbQ">video</a></em>) -
+                            An OpenAustin project showing how Covid-19 vaccine verification infrastructure can be free, easy, and open-source.
+                            (<em>2021-04-22</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://lwvaustin.org/pollworker">Runoff Rally</a></strong>
+                            (<em><a href="https://www.youtube.com/watch?v=HRDyrvI7PTI">video</a></em>) -
+                            A partnership between OpenAustin, The League of Women Voters, and Travis County to make a streamlined application process for poll workers during the pandemic.
+                            (<em>2020-11-26</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://freefacemaskcreator.com/">Free Face Mask Creator</a></strong>
+                            (<em><a href="https://github.com/open-austin/freefacemaskcreator">code</a></em>) -
+                            A web-based design tool that lets you add an image to a face mask and print out the pattern, so you can make your own personalized face masks.
+                            (<em>2020-06-05</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://www.youtube.com/watch?v=RnUaY9tqXnI">Did I actually vote for my candidate?</a></strong>
+                            (<em><a href="https://www.youtube.com/watch?v=RnUaY9tqXnI">video</a></em>,
+                            <em><a href="https://docs.google.com/presentation/d/1rFVlfI7S95LZDRLX6_5zdJVKwjZKkqMipg78atEDXpc/edit">slides</a></em>) -
+                            This is a talk I gave at EFF-Austin on how I manually verified the barcodes on my primary ballot. (<em>2020-05-12</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://www.youtube.com/watch?v=m_l1HZCasA4&t=16m54s">Energy Data Privacy: How Climate Changes Everything</a></strong>
+                            (<em><a href="https://www.youtube.com/watch?v=m_l1HZCasA4&t=16m54s">video</a></em>,
+                            <em><a href="uploads/2019-11-12_-_EFF-Austin_-_Energy_Data_Privacy_How_Climate_Changes_Everything.pdf">slides</a></em> [warning: buzzing audio]) -
+                            This is an updated verison of my energy data privacy talk I gave at the EFF-Austin Privacy Lab meetup. (<em>2019-11-12</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://www.youtube.com/watch?v=y_GKZzQ5xPo">Energy Data Privacy: How Climate Changes Everything</a></strong>
+                            (<em><a href="https://www.youtube.com/watch?v=y_GKZzQ5xPo">video</a></em>,
+                            <em><a href="uploads/2018-12-13_-_Privacy_Lab_-_Energy_Data_Privacy_How_Climate_Changes_Everything.pdf">slides</a></em>) -
+                            This is a talk I gave about energy data privacy at Mozilla's Privacy Lab meetup
+                            in the bay area. (<em>2018-12-13</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://diafygi.github.io/diceware-prettyprint/">Printer-Friendly Diceware</a></strong>
+                            (<em><a href="https://github.com/diafygi/diceware-prettyprint">code</a></em>) -
+                            Generates a easy-to-use printout of <a href="https://en.wikipedia.org/wiki/Diceware">Diceware</a>
+                            word lists so my mom can create strong passwords. (<em>2018-05-13</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://enron.network/">ENRON</a></strong>
+                            (<em><a href="https://www.youtube.com/watch?v=_XWy43NtnjY">video</a></em>) -
+                            Energy Network Research Organization Network (ENRON) is a project created
+                            for the <a href="https://suncode2018.devpost.com/">Powerhouse Suncode 2018</a>
+                            hackathon. ENRON is a team of experts that help find ways to arbitrage and
+                            manipulate energy blockchains. (<em>2018-04-14</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://sks.daylightpirates.org/">sks.daylightpirates.org</a></strong> -
+                            Run one of the OpenPGP keyservers in the <a href="https://sks-keyservers.net/status/">SKS keyserver pool</a>.
+                            This pool is a critical public key infrastructure (PKI) for the global community.
+                            When you run <code>gpg --recv-key 72EFEE3D</code>, you might be pulling from this server.
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/acme-nosudo">ACME Without Sudo</a></strong> -
+                            A python script that will get your https certificate signed by the
+                            free Let's Encrypt certificate authority without asking for your private
+                            keys or sudo permissions. (<em>2015-01-18</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://eb-to-ical.daylightpirates.org/">Eventbrite-to-iCal Converter</a></strong>
+                            (<em><a href="https://eb-to-ical.daylightpirates.org/">website</a>,
+                                 <a href="https://github.com/diafygi/eb-to-ical">code</a></em>) -
+                            Nginx+Lua config that converts Eventbrite API to iCalenadar format. (<em>2017-11-26</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://diafygi.github.io/dice-css/">Dice.css</a></strong>
+                            (<em><a href="https://diafygi.github.io/dice-css/">demo</a>,
+                                 <a href="https://github.com/diafygi/dice-css">code</a></em>) -
+                            A tiny css library for dice icons, only 867 bytes gzipped. (<em>2016-12-28</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://bayareaenergyevents.com/">Bay Area Energy Events</a></strong> -
+                            My public calendar of all the San Francisco Bay Area clean
+                            energy related events. (<em>2016-06-17</em>)
+                        </li>
+                        <li>
+                            <strong><a href="posts/2016-05-25_hsts-hkps/index.html">HSTS on the SKS pool</a></strong> -
+                            This is how I configure my nginx server to handle https while
+                            still being a part of the sks-keyserver pool. (<em>2016-05-25</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/solartetris">Solar Tetris</a></strong>
+                            (<em><a href="https://diafygi.github.io/solartetris/">demo</a></em>) -
+                            A hackathon project for the 2016 <a href="http://suncode.devpost.com/">Powerhouse</a>
+                            <a href="http://suncode.devpost.com/">SunCode hackathon</a>. (<em>2016-05-14</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/privacy-checklist">Privacy Checklist</a></strong> -
+                            A checklist of privacy links that I built for the Common Cause
+                            <a href="http://act-ca.commoncause.org/site/Calendar?id=103466&amp;view=Detail">Media and Democracy Summit</a>.
+                            (<em>2016-02-20</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://docs.google.com/presentation/d/1LbJcPulQ_a4utqNCUoGCk8GTQbchN2BL_kAF3DNJQbo/edit?usp=sharing">WebCryptoAPI Overview</a></strong> -
+                            A talk I gave at HTML5DevConf 2015 about the
+                            <a href="http://www.w3.org/TR/WebCryptoAPI/">Web Cryptography API</a>.
+                            (<em>2015-10-19</em>)
+                        </li>
+                        <li>
+                            <strong><a href="http://bl.ocks.org/diafygi/3f344c22f8a37a7b2151">SKS gossip network</a></strong>
+                            (<em><a href="https://gist.github.com/diafygi/3f344c22f8a37a7b2151">code</a></em>) -
+                            This is a visualization of the SKS keyserver pool gossip network.
+                            Note how many peers are outside of the pool. (<em>2015-09-01</em>)
+                        </li>
+                        <li>
+                            <strong><a href="posts/2015-06-12_https-media/index.html">An Open Letter to News Sites</a></strong> -
+                            This is an open letter I wrote to news media website owners
+                            calling for them to start using https by default. (<em>2015-06-12</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/gnu-pricing">GNU Pricing</a></strong>
+                            (<em><a href="https://diafygi.github.io/gnu-pricing/website/">announcement</a></em>) -
+                            This is a satire project that I created for the
+                            <a href="https://stupidhackathon.github.io/">Stupid Shit No One Needs &amp; Terrible Ideas Hackathon</a>
+                            that wraps all of the GNU command line tools with a pricing model,
+                            so that you have to pay to use <code>ls</code>, <code>grep</code>,
+                            <code>gcc</code>, etc. (<em>2015-05-10</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/detect-throwaways">Firefox Detect Throwaways</a></strong>
+                            (<em><a href="https://diafygi.github.io/detect-throwaways/index.html">demo</a></em>) -
+                            This is a demo that exploits <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1100154">Bug #1100154</a>
+                            in Firefox to potentially compromise the identity of throwaway
+                            account users on social media sites.
+                        </li>
+                        <li>
+                            <strong><a href="https://keyserver-elasticsearch.daylightpirates.org/">Keyserver Elasticsearch</a></strong>
+                            (<em><a href="https://github.com/diafygi/keyserver-elasticsearch">docs</a></em>) -
+                            This is a dump of the SKS keyserver pool database into an
+                            elasticsearch instance so that researchers can do complex searches on
+                            the SKS public key infrastructure. (<em>2015-04-05</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/openpgp-python">openpgp-python</a></strong> -
+                            A python library that can parse and generate OpenPGP packets. (<em>2015-04-05</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/webcrypto-examples">WebCryptoAPI Examples</a></strong>
+                            (<em><a href="https://diafygi.github.io/webcrypto-examples/">demo</a></em>) -
+                            I couldn't find anywhere that had clear examples of WebCrytoAPI,
+                            so I wrote examples and made a live table with them.
+                            (<em>2015-02-22</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/webrtc-ips">IP Addresses via WebRTC's STUN</a></strong>
+                            (<em><a href="https://diafygi.github.io/webrtc-ips/">demo</a></em>) -
+                            A proof of concept that will allow you to see your local and public
+                            IP addresses in Javascript by extracting candidate messages from
+                            WebRTC's STUN protocol requests. (<em>2015-01-25</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/publickeyjs">PublicKey.js</a></strong>
+                            (<em><a href="https://diafygi.github.io/publickeyjs/">demo</a></em>) -
+                            A javascript library for easily searching for and retrieving
+                            PGP public keys from SKS and Keybase keyservers. (<em>2015-01-12</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/ppark">PPark</a></strong> -
+                            A simple app that guides you into a parallel parking space using the
+                            Toyota CAN Gateway API via bluetooth. Made for the OnRamp 2014
+                            hackathon. (<em>2014-12-07</em>)
+                        </li>
+                        <li>
+                            <strong><a href="http://www.pvsolarreport.com/the-next-internet/">The Next "Internet"</a></strong> -
+                            An short article I wrote for PV Solar Report about the energy revolution.
+                            (<em>2014-11-12</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/emailpk">EmailPK</a></strong>
+                            (<em><a href="https://diafygi.github.io/emailpk/">demo</a></em>) -
+                            Instant encrypted email, a javascript app and library that
+                            allows easy email encryption.
+                            <ul>
+                                <li>Initial release (<em>2014-08-16</em>)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/myLock">myLock</a></strong>
+                            (<em><a href="https://diafygi.github.io/myLock/">demo</a></em>) -
+                            myLock Easy Encryption, a javascript app and library that allows
+                            asymmetric encryption in a browser.
+                            <ul>
+                                <li>Initial release (<em>2014-07-26</em>)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/Offset248/">Offset248</a></strong> -
+                            Binary encoding for the Unicode world. A simple technique for
+                            encoding binary to text that can be easily copied and pasted.
+                            (<em>2014</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/keencasa/">Keen Casa</a></strong>
+                            (<em><a href="http://www.keencasa.com/">demo</a></em>,
+                            <em><a href="https://www.youtube.com/watch?v=RQBdhjic-58">video</a></em>) -
+                            The Mint.com for Internet of Things. Created this prototype and pitch
+                            with a team at ProtoHack San Francisco. We got into the top five
+                            finalists (out of 40 entries). (<em>2014</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://gist.github.com/diafygi/90a3e80ca1c2793220e5/">Base58 encoder/decoder</a></strong>
+                            (<em><a href="https://rawgit.com/diafygi/90a3e80ca1c2793220e5/raw/ab5f00af7ba9e150179d2aef9ff3d8d894b6265b/test.html">demo</a></em>) -
+                            A fun <a href="http://www.140byt.es/">140byt.es</a> project
+                            to make the smallest base 58 encoder and decoder possible in
+                            javascript. (<em>2014</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/b2g_inari_nightly">b2g_inari_nightly</a></strong>
+                            (<em><a href="https://daylightpirates.org/b2g_inari_nightly_builds/">builds</a></em>) -
+                            Nightly builds of <a href="https://www.mozilla.org/en-US/firefox/os/">Firefox OS</a>
+                            (codenamed b2g) for the
+                            <a href="http://www.ztedevices.com/product/smart_phone/2bcf2d56-0c9a-4129-a25c-acce58c8e502.html">ZTE Open</a>
+                            (config name: inari).
+                            <ul>
+                                <li>Started nightly builds for three branches: master, v1.2, and v1.3. (<em>2013-12-28</em>)</li>
+                                <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=965180">Bug #965180</a> is preventing me from building. (<em>2014-01-29</em>)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><a href="https://gist.github.com/diafygi/9614360">Bullet Spinner</a></strong>
+                            (<em><a href="https://rawgithub.com/diafygi/9614360/raw/9ce994e4f694d43daabb05a9fc19b0e09b740ba9/test.html">demo</a></em>) -
+                            A fun <a href="http://www.140byt.es/">140byt.es</a> project
+                            to make an ajax-style loading spinner in fewer than 140 bytes
+                            of javascript. (<em>2014</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/d3cheap">d3 on cheap smartphones</a></strong>
+                            (<em><a href="https://diafygi.github.io/d3cheap">demo</a></em>,
+                            <em><a href="https://www.youtube.com/watch?v=T3MU3jxEye8">video</a></em>) -
+                            Exploring the svg and d3 performance on $80 Android and Firefox OS
+                            smartphones. My first time messing around with Firefox OS. (<em>2013</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/ascentsolar">Ascent Solar</a></strong>
+                            (<em><a href="https://www.youtube.com/watch?v=5bNU8qsG9RA">demo</a></em>) -
+                            A developing world solar lantern inventory tracker that I helped
+                            code for the SFunCube solar hackathon. (<em>2013</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/hcsmpstats">HCSMP stats</a></strong> -
+                            A simple statistics scraper for a Minecraft multiplayer server.
+                            My first time messing around with flask. (<em>2012</em>)
+                        </li>
+                        <li>
+                            <strong><a href="http://www.pmwiki.org/wiki/Cookbook/ViewDiff">ViewDiff Recipe</a></strong> -
+                            A PmWiki plugin that renders the differences between two page versions. (<em>2011</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://sourceforge.net/projects/imapgrab/">IMAPgrab</a></strong> -
+                            A python script and gui for backing up IMAP mail servers, including Gmail.
+                            My first android. (<em>2010</em>)
+                        </li>
+                        <li>
+                            <strong><a href="https://github.com/diafygi/kitco-android/">kitco-android</a></strong> -
+                            A barebones gold spot price scraper. My first android app. (<em>2009</em>)
+                        </li>
+                        <li>
+                            <strong><a href="http://www.pmwiki.org/wiki/Cookbook/PageFeed">PageFeed Recipe</a></strong> -
+                            A PmWiki plugin that generates an RSS feed from a wiki page's history. (<em>2009</em>)
+                        </li>
+                        <li>
+                            <strong><a href="http://www.pmwiki.org/wiki/Cookbook/MailListForm">MailListForm Recipe</a></strong> -
+                            A PmWiki plugin that inserts a mailing list registration form. (<em>2008</em>)
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/myLock">myLock</a></strong>
-                    (<em><a href="https://diafygi.github.io/myLock/">demo</a></em>) -
-                    myLock Easy Encryption, a javascript app and library that allows
-                    asymmetric encryption in a browser.
-                    <ul>
-                        <li>Initial release (<em>2014-07-26</em>)</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/Offset248/">Offset248</a></strong> -
-                    Binary encoding for the Unicode world. A simple technique for
-                    encoding binary to text that can be easily copied and pasted.
-                    (<em>2014</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/keencasa/">Keen Casa</a></strong>
-                    (<em><a href="http://www.keencasa.com/">demo</a></em>,
-                    <em><a href="https://www.youtube.com/watch?v=RQBdhjic-58">video</a></em>) -
-                    The Mint.com for Internet of Things. Created this prototype and pitch
-                    with a team at ProtoHack San Francisco. We got into the top five
-                    finalists (out of 40 entries). (<em>2014</em>)
-                </li>
-                <li>
-                    <strong><a href="https://gist.github.com/diafygi/90a3e80ca1c2793220e5/">Base58 encoder/decoder</a></strong>
-                    (<em><a href="https://rawgit.com/diafygi/90a3e80ca1c2793220e5/raw/ab5f00af7ba9e150179d2aef9ff3d8d894b6265b/test.html">demo</a></em>) -
-                    A fun <a href="http://www.140byt.es/">140byt.es</a> project
-                    to make the smallest base 58 encoder and decoder possible in
-                    javascript. (<em>2014</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/b2g_inari_nightly">b2g_inari_nightly</a></strong>
-                    (<em><a href="https://daylightpirates.org/b2g_inari_nightly_builds/">builds</a></em>) -
-                    Nightly builds of <a href="https://www.mozilla.org/en-US/firefox/os/">Firefox OS</a>
-                    (codenamed b2g) for the
-                    <a href="http://www.ztedevices.com/product/smart_phone/2bcf2d56-0c9a-4129-a25c-acce58c8e502.html">ZTE Open</a>
-                    (config name: inari).
-                    <ul>
-                        <li>Started nightly builds for three branches: master, v1.2, and v1.3. (<em>2013-12-28</em>)</li>
-                        <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=965180">Bug #965180</a> is preventing me from building. (<em>2014-01-29</em>)</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong><a href="https://gist.github.com/diafygi/9614360">Bullet Spinner</a></strong>
-                    (<em><a href="https://rawgithub.com/diafygi/9614360/raw/9ce994e4f694d43daabb05a9fc19b0e09b740ba9/test.html">demo</a></em>) -
-                    A fun <a href="http://www.140byt.es/">140byt.es</a> project
-                    to make an ajax-style loading spinner in fewer than 140 bytes
-                    of javascript. (<em>2014</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/d3cheap">d3 on cheap smartphones</a></strong>
-                    (<em><a href="https://diafygi.github.io/d3cheap">demo</a></em>,
-                    <em><a href="https://www.youtube.com/watch?v=T3MU3jxEye8">video</a></em>) -
-                    Exploring the svg and d3 performance on $80 Android and Firefox OS
-                    smartphones. My first time messing around with Firefox OS. (<em>2013</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/ascentsolar">Ascent Solar</a></strong>
-                    (<em><a href="https://www.youtube.com/watch?v=5bNU8qsG9RA">demo</a></em>) -
-                    A developing world solar lantern inventory tracker that I helped
-                    code for the SFunCube solar hackathon. (<em>2013</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/hcsmpstats">HCSMP stats</a></strong> -
-                    A simple statistics scraper for a Minecraft multiplayer server.
-                    My first time messing around with flask. (<em>2012</em>)
-                </li>
-                <li>
-                    <strong><a href="http://www.pmwiki.org/wiki/Cookbook/ViewDiff">ViewDiff Recipe</a></strong> -
-                    A PmWiki plugin that renders the differences between two page versions. (<em>2011</em>)
-                </li>
-                <li>
-                    <strong><a href="https://sourceforge.net/projects/imapgrab/">IMAPgrab</a></strong> -
-                    A python script and gui for backing up IMAP mail servers, including Gmail.
-                    My first android. (<em>2010</em>)
-                </li>
-                <li>
-                    <strong><a href="https://github.com/diafygi/kitco-android/">kitco-android</a></strong> -
-                    A barebones gold spot price scraper. My first android app. (<em>2009</em>)
-                </li>
-                <li>
-                    <strong><a href="http://www.pmwiki.org/wiki/Cookbook/PageFeed">PageFeed Recipe</a></strong> -
-                    A PmWiki plugin that generates an RSS feed from a wiki page's history. (<em>2009</em>)
-                </li>
-                <li>
-                    <strong><a href="http://www.pmwiki.org/wiki/Cookbook/MailListForm">MailListForm Recipe</a></strong> -
-                    A PmWiki plugin that inserts a mailing list registration form. (<em>2008</em>)
-                </li>
-            </ul>
+                    <!-- explicit light-dark mode toggle -->
+                    <div id="mode-toggle">
+                        <!-- support accessibility for checkbox hack (https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role#required_javascript_features) -->
+                        <label for="light-mode" tabindex="0" role="button" onKeyDown="if(event.key&&(event.key==='Enter'||event.key===' ')){document.getElementById('light-mode').checked=true;document.querySelector('label[for=dark-mode]').focus();}">switch to light mode</label>
+                        <label for="dark-mode" tabindex="0" role="button" onKeyDown="if(event.key&&(event.key==='Enter'||event.key===' ')){document.getElementById('dark-mode').checked=true;document.querySelector('label[for=light-mode]').focus();}">switch to dark mode</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
